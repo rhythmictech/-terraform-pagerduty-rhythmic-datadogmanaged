@@ -37,19 +37,18 @@ No modules.
 | Name | Type |
 |------|------|
 | [datadog_integration_pagerduty.this](https://registry.terraform.io/providers/datadog/datadog/latest/docs/resources/integration_pagerduty) | resource |
-| [datadog_integration_pagerduty_service_object.this](https://registry.terraform.io/providers/datadog/datadog/latest/docs/resources/integration_pagerduty_service_object) | resource |
+| [datadog_integration_pagerduty_service_object.configure_integration](https://registry.terraform.io/providers/datadog/datadog/latest/docs/resources/integration_pagerduty_service_object) | resource |
+| [datadog_integration_pagerduty_service_object.existing_integration](https://registry.terraform.io/providers/datadog/datadog/latest/docs/resources/integration_pagerduty_service_object) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_configure_datadog_integration"></a> [configure\_datadog\_integration](#input\_configure\_datadog\_integration) | Flag to create the Datadog integration (must already exist if set to false) | `bool` | `true` | no |
-| <a name="input_datadog_api_key"></a> [datadog\_api\_key](#input\_datadog\_api\_key) | Datadog API Key (cannot be inferred from the provider, required if configure\_datadog\_integration is true) | `string` | `null` | no |
+| <a name="input_configure_datadog_integration"></a> [configure\_datadog\_integration](#input\_configure\_datadog\_integration) | Flag to create the Datadog integration (must already exist if set to false) | `bool` | `false` | no |
+| <a name="input_pagerduty_api_token"></a> [pagerduty\_api\_token](#input\_pagerduty\_api\_token) | PagerDuty API Token (Required if configure\_datadog\_integration is true) | `string` | `null` | no |
 | <a name="input_pagerduty_service_integrations"></a> [pagerduty\_service\_integrations](#input\_pagerduty\_service\_integrations) | Map of PagerDuty Datadog integrations | `map(any)` | `null` | no |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_datadog_integration_key"></a> [datadog\_integration\_key](#output\_datadog\_integration\_key) | Datadog API token |
+No outputs.
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
