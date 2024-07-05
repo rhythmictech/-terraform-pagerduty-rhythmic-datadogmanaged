@@ -37,8 +37,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [datadog_integration_pagerduty.this](https://registry.terraform.io/providers/datadog/datadog/latest/docs/resources/integration_pagerduty) | resource |
-| [datadog_integration_pagerduty_service_object.configure_integration](https://registry.terraform.io/providers/datadog/datadog/latest/docs/resources/integration_pagerduty_service_object) | resource |
-| [datadog_integration_pagerduty_service_object.existing_integration](https://registry.terraform.io/providers/datadog/datadog/latest/docs/resources/integration_pagerduty_service_object) | resource |
+| [datadog_integration_pagerduty_service_object.this](https://registry.terraform.io/providers/datadog/datadog/latest/docs/resources/integration_pagerduty_service_object) | resource |
 
 ## Inputs
 
