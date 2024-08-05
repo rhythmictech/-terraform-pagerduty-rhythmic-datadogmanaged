@@ -1,12 +1,12 @@
 variable "configure_datadog_integration" {
-  default     = true
+  default     = false
   description = "Flag to create the Datadog integration (must already exist if set to false)"
   type        = bool
 }
 
-variable "datadog_api_key" {
+variable "pagerduty_api_token" {
   default     = null
-  description = "Datadog API Key (cannot be inferred from the provider, required if configure_datadog_integration is true)"
+  description = "PagerDuty API Token (Required if configure_datadog_integration is true)"
   type        = string
 }
 

@@ -2,7 +2,11 @@ resource "datadog_integration_pagerduty" "this" {
   count = var.configure_datadog_integration ? 1 : 0
 
   subdomain = "rhythmic"
-  api_token = var.datadog_api_key
+  api_token = var.pagerduty_api_token
+
+  lifecycle {
+    ignore_changes = [schedules]
+  }
 }
 
 resource "datadog_integration_pagerduty_service_object" "this" {
@@ -10,5 +14,6 @@ resource "datadog_integration_pagerduty_service_object" "this" {
 
   service_name = each.value.name
   service_key  = each.value.key
-  depends_on   = [datadog_integration_pagerduty.this]
+
+  depends_on = [datadog_integration_pagerduty.this]
 }
